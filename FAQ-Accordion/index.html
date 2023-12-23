@@ -1,48 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | FAQ accordion</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
 
-  FAQs
+    <title>Frontend Mentor | FAQ accordion</title>
 
-  What is Frontend Mentor, and how will it help me?
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        margin-top: 0px;
+        margin-left: 0px;
+        overflow: hidden;
+        font-family: 'Work Sans', sans-serif;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      .navSvg {
+        height: 30vh;
+        width: 100vw;
+        background-image: url("./assets/images/background-pattern-desktop.svg");
+      }
+      .mainBg {
+        position: relative;
+        top: 0px;
+        background-color: #f9eeff;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      .mainContent {
+        position: relative;
+        top: -15vh;
+        width: 50vw;
+        height: 60vh;
+        background: #fffefe;
+        border-radius: 20px;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding-inline: 15px;
+      }
+      .FAQ {
+        display: flex;
+      }
+      .sections {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+      }
+      p {
+        font-size: 13px;
+        display: none;
+      }
+      section {
+        width: 100%;
+      }
+      .ques {
+        display: flex;
+        justify-content: space-between;
+      }
+      .attribution {
+        
+      position: relative;
+      bottom: -10vh;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media only screen and (max-width: 600px) {
+          .mainContent {
+        position: relative;
+        top: -20vh;
+        width: 50vw;
+        height: 80%;
+        background: #fffefe;
+        border-radius: 20px;
+      }
+ .attribution {
+    position: relative;
+    top: -5px;
+    font-size: 11px;
+    text-align: center;
+ }
+}
+    </style>
+  </head>
+  <body>
+    <main class="conatiner">
+      <nav class="navSvg"></nav>
+      <div class="mainBg">
+        <div class="mainContent">
+          <div class="content">
+            <div class="FAQ">
+              <img
+                class=""
+                src="./assets/images/icon-star.svg"
+                alt="StarIcon"
+              />
+              <h1>FAQs</h1>
+            </div>
+            <div class="sections">
+              <section>
+                <div class="ques">
+                  <h4>What is Frontend Mentor, and how will it help me?</h4>
+                  <img
+                    class="Img1"
+                    onclick="{myFunction(event)}"
+                    src="./assets/images/icon-plus.svg"
+                    alt="Plus Icon"
+                  />
+                </div>
+                <p id="p1">
+                  Frontend Mentor offers realistic coding challenges to help
+                  developers improve their frontend coding skills with projects
+                  in HTML, CSS, and JavaScript. It's suitable for all levels and
+                  ideal for portfolio building.
+                </p>
+              </section>
 
-  Frontend Mentor offers realistic coding challenges to help developers improve their 
-  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
-  all levels and ideal for portfolio building.
+              <section>
+                <div class="ques">
+                  <h4>Is Frontend Mentor free?</h4>
+                  <img
+                    class="Img2"
+                    onclick="{myFunction(event)}"
+                    src="./assets/images/icon-plus.svg"
+                    alt="Plus Icon"
+                  />
+                </div>
 
-  Is Frontend Mentor free?
+                <p id="p2">
+                  Yes, Frontend Mentor offers both free and premium coding
+                  challenges, with the free option providing access to a range
+                  of projects suitable for all skill levels.
+                </p>
+              </section>
+              <section>
+                <div class="ques">
+                  <h4>Can I use Frontend Mentor projects in my portfolio?</h4>
+                  <img
+                    class="Img3"
+                    onclick="{myFunction(event)}"
+                    src="./assets/images/icon-plus.svg"
+                    alt="Plus Icon"
+                  />
+                </div>
+                <p id="p3">
+                  Yes, you can use projects completed on Frontend Mentor in your
+                  portfolio. It's an excellent way to showcase your skills to
+                  potential employers!
+                </p>
+              </section>
+              <section>
+                <div class="ques">
+                  <h4>How can I get help if I'm stuck on a challenge?</h4>
+                  <img
+                    class="Img4"
+                    onclick="{myFunction(event)}"
+                    src="./assets/images/icon-plus.svg"
+                    alt="Plus Icon"
+                  />
+                </div>
 
-  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
-  option providing access to a range of projects suitable for all skill levels.
+                <p id="p4">
+                  The best place to get help is inside Frontend Mentor's Discord
+                  community. There's a help channel where you can ask questions
+                  and seek support from other community members.
+                </p>
+              </section>
+            </div>
 
-  Can I use Frontend Mentor projects in my portfolio?
+            <div class="attribution">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+              >. Coded by <a href="https://github.com/A-karkaih">A-karkaih</a>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    function myFunction(e) {
+      var clickedElement = e.target;
+      var section = event.target.closest("section");
+      var paragraph = section.querySelector("p");
 
-  Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-  way to showcase your skills to potential employers!
+      const nodeList1 = document.querySelectorAll("img");
+      const nodeList = document.querySelectorAll("p");
 
-  How can I get help if I'm stuck on a Frontend Mentor challenge?
-  
-  The best place to get help is inside Frontend Mentor's Discord community. There's a help 
-  channel where you can ask questions and seek support from other community members.
+      for (let i = 0; i < nodeList.length; i++) {
+        if (!(nodeList[i].id === paragraph.id)) {
+          nodeList[i].style.display = "none";
+        }
+      }
+      for (let i = 1; i < nodeList1.length; i++) {
+        nodeList1[i].src = "./assets/images/icon-plus.svg";
+      }
+      //Quiestion1
+      if (clickedElement.className === "Img1") {
+        var p1Element = document.getElementById("p1");
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        if (p1Element.style.display === "block") {
+          p1Element.style.display = "none";
+          clickedElement.src = "./assets/images/icon-plus.svg";
+        } else {
+          p1Element.style.display = "block";
+          clickedElement.src = "./assets/images/icon-minus.svg";
+        }
+      }
+      //Quiestion2
+      if (clickedElement.className === "Img2") {
+        var p1Element = document.getElementById("p2");
+        if (p1Element) {
+          if (p1Element.style.display === "block") {
+            p1Element.style.display = "none";
+            clickedElement.src = "./assets/images/icon-plus.svg";
+          } else {
+            p1Element.style.display = "block";
+            clickedElement.src = "./assets/images/icon-minus.svg";
+          }
+        } else {
+          console.error("Element with id 'p2' not found");
+        }
+      }
+      //Quiestion3
+      if (clickedElement.className === "Img3") {
+        var p1Element = document.getElementById("p3");
+        if (p1Element) {
+          if (p1Element.style.display === "block") {
+            p1Element.style.display = "none";
+            clickedElement.src = "./assets/images/icon-plus.svg";
+          } else {
+            p1Element.style.display = "block";
+            clickedElement.src = "./assets/images/icon-minus.svg";
+          }
+        } else {
+          console.error("Element with id 'p3' not found");
+        }
+      }
+
+      //Quiestion4
+      if (clickedElement.className === "Img4") {
+        var p1Element = document.getElementById("p4");
+
+        if (p1Element) {
+          if (p1Element.style.display === "block") {
+            p1Element.style.display = "none";
+            clickedElement.src = "./assets/images/icon-plus.svg";
+          } else {
+            p1Element.style.display = "block";
+            clickedElement.src = "./assets/images/icon-minus.svg";
+          }
+        } else {
+          console.error("Element with id 'p4' not found");
+        }
+      }
+    }
+  </script>
 </html>
